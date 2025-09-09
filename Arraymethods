@@ -1,0 +1,169 @@
+//flat
+
+const arr1=[1,2,[3,4]];
+console.log(arr1.flat());
+
+output:
+ [1, 2, 3, 4]
+//findlastindex:
+
+const numbers=[1,3,5,7,9,10,12];
+const result=numbers.findLastIndex((num)=>{
+    return num>5;
+});
+console.log(result);
+
+output:
+6
+
+//findindex:
+
+const numbers=[1,3,5,7,9,10,12];
+const result=numbers.findIndex((num)=>{
+    return num>5;
+});
+console.log(result);
+
+output:
+
+3
+
+
+//findlast
+
+const numbers=[1,3,5,7,9,10,12];
+const result=numbers.findLast((num)=>{
+    return num>5;
+});
+console.log(result);
+
+
+output:
+
+12
+
+
+//find:
+
+const numbers=[1,3,5,7,9,10,12];
+const result=numbers.find((num)=>{
+    return num>5;
+});
+console.log(result);
+
+output:
+
+7
+
+//filter
+
+const humans=['harshini','sureshkumar','vasanthi','one','two','three'];
+const result=humans.filter((human)=>{
+    return human.length>=4;
+});
+console.log(result);
+output:
+
+ ['harshini', 'sureshkumar', 'vasanthi', 'three']
+
+
+//fill
+
+const a1=[1,2,3,4];
+const a2=[1,2,3,4];
+const a3=[1,2,3,4];
+console.log(a1.fill(1,2,3));
+console.log(a2.fill(5,1));
+console.log(a3.fill(0
+));
+output:
+(4) [1, 2, 1, 4]
+js.html:83 (4) [1, 5, 5, 5]
+js.html:84 (4) [0, 0, 0, 0]
+
+//every:
+const no=[2,4,6,8,10];
+const val=no.every((nos)=>{
+     return nos>4;
+})
+console.log(val);
+
+const val2=no.every((nos)=>{
+    return nos>0;
+})
+console.log(val2);
+
+output:
+
+false
+ true
+
+//values:
+const fruits=["apple","banana","mango"];
+const fruitsentries=fruits.values();
+console.log(fruitsentries);
+console.log(fruitsentries.next().value);
+
+output:
+
+Array Iterator {}
+ apple
+
+//entries:
+const fruits=["apple","banana","mango"];
+const fruitsentries=fruits.entries();
+console.log(fruitsentries);
+console.log(fruitsentries.next().value);
+
+output:
+
+(2) [0, 'apple']
+
+
+//copywithin:
+
+const fruits=["apple","banana","mango","grape","orange"];
+console.log(fruits.copyWithin(0,3));
+
+output:
+(5) ['grape', 'orange', 'mango', 'grape', 'orange']
+
+
+//at:
+
+const fruits=["apple","banana","mango"];
+console.log(fruits.at(1));
+console.log(fruits.at(-1));
+output:
+
+banana
+ mango
+
+//map:
+
+const fruits=["apple","banana","mango"];
+const a=fruits.map((fruit)=>{
+    console.log('fruits:', fruit.toUpperCase());
+    return fruit.toUpperCase();
+
+})
+console.log(a);
+
+output:
+
+fruits: APPLE
+ fruits: BANANA
+fruits: MANGO
+(3) ['APPLE', 'BANANA', 'MANGO']
+
+//forEach()
+
+const fruits=["apple","banana","mango"];
+fruits.forEach((fruit)=>{
+    console.log("I like "+ fruit.toUpperCase());
+})
+output:
+
+I like APPLE
+1 I like BANANA
+1 I like MANGO
