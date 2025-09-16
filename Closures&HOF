@@ -1,7 +1,7 @@
 
-//Closures
+//Closures and Higher Order Functions
 
-
+//Higher order functions is a function that returns the function or passing function as a parameter
 //closure is a feature where an inner function has access to the outer(encloing) function's variables even after the outer function has executed.
 function outer(){
     const a="Harshini";
