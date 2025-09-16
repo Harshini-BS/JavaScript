@@ -1,0 +1,118 @@
+
+//Closures
+
+
+//closure is a feature where an inner function has access to the outer(encloing) function's variables even after the outer function has executed.
+function outer(){
+    const a="Harshini";
+    console.log("Hello",a);
+    
+}
+outer();
+
+
+output:
+
+Hello Harshini
+
+const x="Hello world!";
+function outer(){
+    const a="Harshini";
+    console.log("Hello",a);
+    console.log(x);
+    const inner=()=>{
+        console.log("This is inner function");
+        
+    }
+    inner();
+    
+}
+outer();
+
+output:
+
+Hello Harshini
+Hello world!
+This is inner function
+
+
+const x="Hello world!";
+function outer(b){
+    const a="Harshini";
+    console.log("Hello",a);
+    console.log(b);
+    
+    console.log(x);
+    const inner=(name)=>{
+        console.log("Hello",name);
+        console.log("This is inner function");
+        
+    }
+    inner("Harshini");
+    
+}
+outer('This is outer function');
+
+output:
+
+Hello Harshini
+This is outer function
+Hello world!
+Hello Harshini
+This is inner function
+
+const x="Hello world!";
+function outer(b){
+    const a="Harshini";
+    console.log("Hello",a);
+    console.log(b);
+    
+    console.log(x);
+    const inner=()=>{
+        
+        console.log("This is inner function");
+        
+    }
+    return inner;
+    
+}
+
+
+const innerfunction=outer('This is outer function');
+innerfunction();
+
+output:
+
+Hello Harshini
+This is outer function
+Hello world!
+This is inner function
+
+
+unction points(table){
+    const totalpoints=table;
+
+    const addpoints=(points)=>{
+        return totalpoints+points;
+    }
+    
+    const removepoints=(points)=>{
+        return totalpoints-points;
+    }
+    
+    const gettotalpoints=()=>{
+        return totalpoints;
+    }
+    return{
+       addpoints,removepoints,gettotalpoints};  
+}
+const table=points(100);
+console.log(table.gettotalpoints());
+console.log(table.addpoints(80));
+console.log(table.removepoints(20));
+
+output:
+
+100
+180
+80
