@@ -1,0 +1,169 @@
+// Basic Array Destructuring:
+
+const [maths,physics,chemistry]=[100,99,98];
+console.log(maths,physics,chemistry); 
+output:
+
+100 99 98
+
+//handling undefined values:
+
+const [a,b,c,d]=[1,2,3];
+console.log(a,b,c,d); //d will be undefined
+
+output:
+
+1 2 3 undefined
+
+//skipping elements:
+
+const [x,,y]=[10,20,30];
+console.log(x,y); 
+
+output:
+10 30
+
+
+//Discarding extra elements:
+
+const [p,q]=[5,10,15,20];
+console.log(p,q);
+
+output:
+
+5 10
+
+//default values:
+
+const [name,age=19]=["harshini"];
+
+console.log(name,age);
+
+output:
+
+harshini 19
+
+//Rest Syntax:
+
+const [one,two,three,...others]=[1,2,3,4,5,6,7,8,9];
+console.log(one,two,three);
+console.log(others);
+output:
+1 2 3
+
+6) [4, 5, 6, 7, 8, 9]0: 41: 52: 63: 74: 85: 9length: 6[[Prototype]]: Array(0)
+
+
+//Swapping variables:
+let m=100;
+let n=200;
+[m,n]=[n,m];
+console.log(m,n);
+
+output:
+
+200 100
+
+//nesting Array destructuring
+
+
+const [num1,num2,[num3,num4,num5],num6]=[1,2,[3,4,5],6];
+console.log(num1,num2,num3,num4,num5,num6);
+output:
+
+1 2 3 4 5 6
+
+
+
+//Array destructuring with functions:
+
+const fruits=()=>{
+    return["orange","apple","banana"];
+}
+
+const [fruit1,fruit2,fruit3,fruit4="mango"]=fruits();
+console.log(fruit1,fruit2,fruit3,fruit4);
+
+output:
+
+orange apple banana mango
+
+//on loops:
+
+const myteams=[["India","Australia","England","New Zealand"],
+["Virat","Smith","Root","Kane"]];
+for(let team of myteams){
+    console.log(team);
+}
+
+output:
+) ['India', 'Australia', 'England', 'New Zealand']
+0
+: 
+"India"
+1
+: 
+"Australia"
+2
+: 
+"England"
+3
+: 
+"New Zealand"
+length
+: 
+4
+[[Prototype]]
+: 
+Array(0)
+ ['Virat', 'Smith', 'Root', 'Kane']
+0
+: 
+"Virat"
+1
+: 
+"Smith"
+2
+: 
+"Root"
+3
+: 
+"Kane"
+length
+: 
+4
+[[Prototype]]
+: 
+Array(0)
+
+//tryit out:
+const details=()=>{
+    
+return  userdetails=[
+    {
+        id:1,
+        name1:"harshini",
+        age:19,
+    },
+    {
+         id:2,
+        name2:"harshu",
+        age:20,
+    },{
+         id:3,
+        name3:"renu",
+        age:25,
+    }
+]
+}
+const ud=details();
+for(let names of ud){
+    let user=names.name1||names.name2||names.name3;
+    console.log(user);
+}
+
+output:
+
+harshini
+harshu
+renu
